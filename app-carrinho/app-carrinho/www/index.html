@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>title</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<section class="inicio">
+		<h1>CAIXA</h1>
+		<h2>SUPERMERCADO X</h2>
+		<ul>
+			<li class="bvenda">ADICIONE UMA NOVA VENDA</li>
+			<li class="bcompra">ADICIONE UMA NOVA COMPRA</li>
+		</ul>
+		<p>© Copyright by Luana and Isadora</p>
+
+	</section>
+	<section class="venda">
+		<h1>SELECIONE OS PRODUTOS À SUA COMPRA</h1>
+		<ul class="produtos">
+			<li class="leite"><img src="img/milk.png">
+			<h2 class="preco">$3</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+			<li class="maca"><img src="img/apple.png">
+			<h2 class="preco">$2</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+			<li class="pon"><img src="img/bread.png">
+			<h2 class="preco">$3</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+			<li class="bolacha"><img src="img/cookies.png">
+			<h2 class="preco">$3</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+			<li class="peixe"><img src="img/fish.png">
+			<h2 class="preco">$6</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+			<li class="macaron"><img src="img/pasta.png">
+			<h2 class="preco">$5</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+		</ul>
+		<ul class="botoes">
+		<li><img src="img/unchecked.png" class="nao"></li>
+		<li><img src="img/checked.png" class="sim"></li>
+		</ul>
+	</section> 
+	<section class="compra">
+		<h1>SELECIONE OS PRODUTOS À SUA COMPRA</h1>
+		<ul class="produtos">
+			<li class="leite"><img src="img/milk.png">
+			<h2 class="preco">$3</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+			<li class="maca"><img src="img/apple.png">
+			<h2 class="preco">$2</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+			<li class="pon"><img src="img/bread.png">
+			<h2 class="preco">$3</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+			<li class="bolacha"><img src="img/cookies.png">
+			<h2 class="preco">$3</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+			<li class="peixe"><img src="img/fish.png">
+			<h2 class="preco">$6</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+			<li class="macaron"><img src="img/pasta.png">
+			<h2 class="preco">$5</h2>
+			<p>QUANT. EM ESTOQUE</p>
+			<h3 class="quantleite">0</h3>
+			</li>
+		</ul>
+		<ul class="botoes">
+		<li><img src="img/unchecked.png" class="nao"></li>
+		<li><img src="img/checked.png" class="sim"></li>
+		</ul>
+	</section>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+	inicio = $(".inicio");
+	botaovenda = $(".bvenda");
+	botaocompra = $(".bcompra");
+	compra = $(".compra");
+	venda = $(".venda");
+
+
+	botaovenda.on("click", function(){
+		inicio.fadeOut();
+		venda.fadeIn();
+	})
+	botaocompra.on("click", function(){
+		inicio.fadeOut();
+		compra.fadeIn();
+	})
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+body{
+	background: #FFFFFF;
+}
+
+/*!!!!!!!!!!!!!!!!!!INICIO!!!!!!!!!!!!!!!!!!!*/
+section.inicio{
+	height: 100vh;
+	width: 100vw;
+	display: none;
+}
+section.inicio h1{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 4em;
+	text-shadow: 2px 2px #487eb0;
+	color: #ED4C67;
+	padding: 5vh 0 0.5vh 0;
+	letter-spacing: 2vw;
+}
+.inicio h2{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 0.9em;
+	text-shadow: 1px 1px #487eb0;
+	color: #000000;
+	padding: 0vh 0 1vh 0;
+	letter-spacing: 2vw;
+}
+.inicio ul{
+text-align: center;
+margin-top: 25vh;
+}
+.inicio ul li.bvenda{
+	background: #487eb0;
+	box-shadow: 2px 2px #ED4C67;
+	padding: 6vw;
+	margin-left: 15vw;
+	margin-right: 15vw;
+	font-family: "Baloo";
+	font-size: 1em;
+	text-shadow: 1px 1px #000000;
+	color: white;
+}
+.inicio ul li.bcompra{
+	background: #ED4C67;
+	box-shadow: 2px 2px #487eb0;
+	padding: 6vw;
+	margin-left: 15vw;
+	margin-right: 15vw;
+	margin-top: 3vh;
+	font-family: "Baloo";
+	font-size: 1em;
+	text-shadow: 1px 1px #000000;
+	color: white;
+}
+.inicio p{
+	position: relative;
+	top: 30vh;
+	text-align: center;
+	font-size: 0.5em;
+	font-family: "Heebo"
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!VENDA!!!!!!!!!!!!!!!!!*/
+
+.venda{
+	height: 100vh;
+	width: 100vw;
+	display: block;
+}
+.venda ul.produtos{
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+}
+.venda ul.produtos li{
+	width: 40vw;
+	padding: 3vh 0 0vh 5vw;
+}
+.venda li img{
+	width: 20vw;
+}
+.venda h1{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 1.3em;
+	text-shadow: 2px 2px #487eb0;
+	color: #ED4C67;
+	padding: 2vh 0 0.5vh 0;
+	letter-spacing: 2vw;
+}
+.venda h2{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 1.7em;
+	text-shadow: 1px 1px #ED4C67;
+	color: #487eb0;
+	padding: 1vh 0 0 0;
+	letter-spacing: 2vw;
+}
+.venda p{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 0.9em;
+	text-shadow: 1px 1px #487eb0;
+	color: #000000;
+	padding: 1vh 0 0 0;
+}
+.venda h3{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 1.5em;
+	text-shadow: 1px 1px #487eb0;
+	color: #ED4C67;
+	letter-spacing: 2vw;
+}
+.venda ul.botoes{
+	display: flex;
+	text-align: center;
+}
+.venda ul.botoes li{
+	width: 40vw;
+	padding: 3vh 0 0vh 5vw;
+}
+.venda ul.botoes li img{
+	width: 10vw;
+}
