@@ -21,12 +21,15 @@
 		<h4>TOTAL DO DIA (REAIS)</h3>
 		<h3 class="totaldia">0</h3>
 		<h5 class="limpa">LIMPAR</h5>
-		<p>© Copyright by Luana and Isadora</p>
+		<p>©Copyright by Luana and Isadora</p>
 
 
 	</section>
 	<section class="venda">
 		<h1>SELECIONE OS PRODUTOS À SUA COMPRA</h1>
+		<div class="mensagem">
+				<h3 class="mens">SEM ESTE PRODUTO NO ESTOQUE!</h3>
+			</div>
 		<ul class="produtos">
 			<li class="leitecompra"><img src="img/milk.png">
 			<h2 class="preco">$3</h2>
@@ -39,7 +42,7 @@
 			<p>QUANT. EM ESTOQUE</p>
 			<h3 class="quantmaca">3</h3>
 			</li>
-
+			
 			<li class="paocompra"><img src="img/bread.png">
 			<h2 class="preco">$3</h2>
 			<p>QUANT. EM ESTOQUE</p>
@@ -65,6 +68,7 @@
 			</li>
 
 		</ul>
+		
 		<ul class="botoes">
 		<li><img src="img/unchecked.png" class="nao"></li>
 		<li><img src="img/checked.png" class="sim"></li>
@@ -180,7 +184,7 @@
 	$(".menu").on("click", function(){
 		precototal = 0;
 		despesa = 0;
-		$("vendafinal").fadeOut();
+		$(".vendafinal").fadeOut();
 		inicio.fadeIn();
 	})
 	/////////////////////ADD ESTOQUE////////////////////
@@ -243,6 +247,7 @@
 		$(".leitecompra").on("click", function(){
 		if(quantleite == 0){
 			console.log("Sem leite no estoque")
+			 $(".mensagem").css({bottom:"20vh"}).animate({opacity:1,bottom:"50vh"},1000).animate({opacity:0,bottom:"80vh"},2000);
 		} else {
 		$(".quantleite").text(quantleite -=1);
 		$(".quantleiteest").text(quantleite);
@@ -255,6 +260,7 @@
 	$(".macacompra").on("click", function(){
 		if(quantmaca == 0){
 			console.log("Sem maçã no estoque")
+			 $(".mensagem").css({bottom:"20vh"}).animate({opacity:1,bottom:"50vh"},1000).animate({opacity:0,bottom:"80vh"},2000);
 		} else {
 		$(".quantmaca").text(quantmaca -= 1);
 		$(".quantmacaest").text(quantmaca);
@@ -265,6 +271,7 @@
 	$(".paocompra").on("click", function(){
 		if(quantpao == 0){
 			console.log("Sem pao no estoque")
+			 $(".mensagem").css({bottom:"20vh"}).animate({opacity:1,bottom:"50vh"},1000).animate({opacity:0,bottom:"80vh"},2000);
 		} else {
 		$(".quantpao").text(quantpao -= 1);
 		$(".quantpaoest").text(quantpao);
@@ -275,6 +282,7 @@
 	$(".bolachacompra").on("click", function(){
 		if(quantbolacha == 0){
 			console.log("Sem bolacha no estoque")
+			 $(".mensagem").css({bottom:"20vh"}).animate({opacity:1,bottom:"50vh"},1000).animate({opacity:0,bottom:"80vh"},2000);
 		} else {
 		$(".quantbolacha").text(quantbolacha -= 1);
 		$(".quantbolachaest").text(quantbolacha);
@@ -285,6 +293,7 @@
 	$(".peixecompra").on("click", function(){
 		if(quantpeixe == 0){
 			console.log("Sem peixe no estoque")
+			 $(".mensagem").css({bottom:"20vh"}).animate({opacity:1,bottom:"50vh"},1000).animate({opacity:0,bottom:"80vh"},2000);
 		} else {
 		$(".quantpeixe").text(quantpeixe -= 1);
 		$(".quantpeixeest").text(quantpeixe);
@@ -295,6 +304,7 @@
 	$(".macarraocompra").on("click", function(){
 		if(quantmacarrao == 0){
 			console.log("Sem macarrao no estoque")
+			 $(".mensagem").css({bottom:"20vh"}).animate({opacity:1,bottom:"50vh"},1000).animate({opacity:0,bottom:"80vh"},2000);
 		} else {
 		$(".quantmacarrao").text(quantmacarrao -= 1);
 		$(".quantmacarraoest").text(quantmacarrao);
