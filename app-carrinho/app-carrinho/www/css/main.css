@@ -9,7 +9,7 @@ body{
 section.inicio{
 	height: 100vh;
 	width: 100vw;
-	display: none;
+	display: block;
 }
 section.inicio h1{
 	text-align: center;
@@ -58,10 +58,41 @@ margin-top: 25vh;
 }
 .inicio p{
 	position: relative;
-	top: 30vh;
+	top: 15vh;
 	text-align: center;
 	font-size: 0.5em;
 	font-family: "Heebo"
+}
+.inicio h3{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 1.4em;
+	text-shadow: 1px 1px #487eb0;
+	color: #000000;
+	padding: 0vh 0 1vh 0;
+	margin-top: 2vh;
+}
+.inicio h4{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 1em;
+	text-shadow: 1px 1px #487eb0;
+	color: #000000;
+	padding: 0vh 0 1vh 0;
+	margin-top: 4vh;
+}
+.inicio h5.limpa{
+		background: #ED4C67;
+	box-shadow: 2px 2px #487eb0;
+	padding: 1vw;
+	margin-left: 37vw;
+	margin-right: 37vw;
+	margin-top: 1vh;
+	font-family: "Baloo";
+	font-size: 0.7em;
+	text-shadow: 1px 1px #000000;
+	color: white;
+	text-align: center;
 }
 
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!VENDA!!!!!!!!!!!!!!!!!*/
@@ -69,7 +100,7 @@ margin-top: 25vh;
 .venda{
 	height: 100vh;
 	width: 100vw;
-	display: block;
+	display: none;
 }
 .venda ul.produtos{
 	display: flex;
@@ -194,6 +225,11 @@ margin-top: 25vh;
 }
 
 /*/////////////////VENDA FINAL///////////////*/
+.vendafinal{
+	height: 100%;
+	width: 100%;
+	display: none;
+}
 .vendafinal h2{
 	text-align: center;
 	font-family: "Baloo";

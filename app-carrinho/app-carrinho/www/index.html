@@ -18,7 +18,11 @@
 			<li class="bvenda">ADICIONE UMA NOVA VENDA</li>
 			<li class="bcompra">ADICIONE UMA NOVA COMPRA</li>
 		</ul>
+		<h4>TOTAL DO DIA (REAIS)</h3>
+		<h3 class="totaldia">0</h3>
+		<h5 class="limpa">LIMPAR</h5>
 		<p>© Copyright by Luana and Isadora</p>
+
 
 	</section>
 	<section class="venda">
@@ -107,8 +111,8 @@
 
 		</ul>
 		<ul class="botoes">
-		<li><img src="img/unchecked.png" class="naovenda"></li>
-		<li><img src="img/checked.png" class="simvenda"></li>
+		<li><img src="img/unchecked.png" class="naocompra"></li>
+		<li><img src="img/checked.png" class="simcompra"></li>
 		</ul>
 	</section>
 	<section class="vendafinal">
@@ -131,15 +135,36 @@
 	quantpeixe = 3
 	quantmacarrao = 3
 	precototal = 0;
+	totaldodia = 0;
+	despesa = 0;
 
+	$(".limpa").on("click", function(){
+		$(".totaldia").text(0)
+		totaldodia = 0;
+	})
 
 	$(".sim").on("click", function(){
-		compra.fadeOut();
 		venda.fadeOut();
 		$(".vendafinal").fadeIn();
+		totaldodia += precototal;
+		$(".totaldia").text(totaldodia);
 	})
 	$(".nao").on("click", function(){
 		precototal = 0;
+		despesa = 0;
+		venda.fadeOut();
+		compra.fadeOut();
+		inicio.fadeIn();
+	})
+	$(".simcompra").on("click", function(){
+		compra.fadeOut();
+		$(".vendafinal").fadeIn();
+		totaldodia = totaldodia - despesa;
+		$(".totaldia").text(totaldodia);
+	})
+	$(".naocompra").on("click", function(){
+		precototal = 0;
+		despesa = 0;
 		venda.fadeOut();
 		compra.fadeOut();
 		inicio.fadeIn();
@@ -148,20 +173,83 @@
 		inicio.fadeOut();
 		compra.fadeIn();
 	})
+	botaovenda.on("click", function(){
+		inicio.fadeOut();
+		venda.fadeIn();
+	})
 	$(".menu").on("click", function(){
 		precototal = 0;
+		despesa = 0;
 		$("vendafinal").fadeOut();
 		inicio.fadeIn();
 	})
-	/////////////////////VENDA////////////////////
+	/////////////////////ADD ESTOQUE////////////////////
 
-	$(".leitecompra").on("click", function(){
+	$(".leite").on("click", function(){
+		$(".quantleiteest").text(quantleite +=1);
+		$(".quantleite").text(quantleite);
+		console.log(quantleite)
+		precototal += 3;
+		despesa += 3;
+		console.log(despesa);
+		$(".precofinal").text(precototal)
+
+		
+	})
+	$(".maca").on("click", function(){
+		$(".quantmacaest").text(quantmaca += 1);
+		$(".quantmaca").text(quantmaca);
+		precototal += 2;
+		despesa += 3; console.log(despesa);
+		$(".precofinal").text(precototal)
+
+	})
+	$(".pao").on("click", function(){
+		$(".quantpaoest").text(quantpao += 1);
+		$(".quantpao").text(quantleite);
+		precototal += 3;
+		despesa += 3; console.log(despesa);
+		$(".precofinal").text(precototal)
+
+
+	})
+	$(".bolacha").on("click", function(){
+		$(".quantbolachaest").text(quantbolacha += 1);
+		$(".quantbolacha").text(quantbolacha);
+		precototal += 3;
+		despesa += 3; console.log(despesa);
+		$(".precofinal").text(precototal)
+
+	})
+	$(".peixe").on("click", function(){
+		$(".quantpeixeest").text(quantpeixe += 1);
+		$(".quantpeixe").text(quantpeixe);
+		precototal += 6;
+		despesa += 6; console.log(despesa);
+		$(".precofinal").text(precototal)
+
+	})
+	$(".macarrao").on("click", function(){
+		$(".quantmacarraoest").text(quantmacarrao += 1);
+		$(".quantmacarrao").text(quantmacarrao);
+		precototal += 5;
+		despesa += 5; console.log(despesa);
+		$(".precofinal").text(precototal)
+
+	})
+
+
+	/////////////ADD COMPRA///////////
+		$(".leitecompra").on("click", function(){
 		if(quantleite == 0){
 			console.log("Sem leite no estoque")
 		} else {
 		$(".quantleite").text(quantleite -=1);
+		$(".quantleiteest").text(quantleite);
 		console.log(quantleite)
 		precototal += 3;
+		$(".precofinal").text(precototal)
+
 		
 	}})
 	$(".macacompra").on("click", function(){
@@ -169,40 +257,50 @@
 			console.log("Sem maçã no estoque")
 		} else {
 		$(".quantmaca").text(quantmaca -= 1);
+		$(".quantmacaest").text(quantmaca);
 		precototal += 2;
-		
+		$(".precofinal").text(precototal)
+
 	}})
 	$(".paocompra").on("click", function(){
 		if(quantpao == 0){
 			console.log("Sem pao no estoque")
 		} else {
 		$(".quantpao").text(quantpao -= 1);
+		$(".quantpaoest").text(quantpao);
 		precototal += 3;
-		
+		$(".precofinal").text(precototal)
+
 	}})
 	$(".bolachacompra").on("click", function(){
 		if(quantbolacha == 0){
 			console.log("Sem bolacha no estoque")
 		} else {
 		$(".quantbolacha").text(quantbolacha -= 1);
+		$(".quantbolachaest").text(quantbolacha);
 		precototal += 3;
-		
+		$(".precofinal").text(precototal)
+
 	}})
 	$(".peixecompra").on("click", function(){
 		if(quantpeixe == 0){
 			console.log("Sem peixe no estoque")
 		} else {
 		$(".quantpeixe").text(quantpeixe -= 1);
+		$(".quantpeixeest").text(quantpeixe);
 		precototal += 6;
-		
+		$(".precofinal").text(precototal)
+
 	}})
 	$(".macarraocompra").on("click", function(){
 		if(quantmacarrao == 0){
 			console.log("Sem macarrao no estoque")
 		} else {
 		$(".quantmacarrao").text(quantmacarrao -= 1);
+		$(".quantmacarraoest").text(quantmacarrao);
 		precototal += 5;
-		
+		$(".precofinal").text(precototal)
+
 	}})
 	
 </script>
