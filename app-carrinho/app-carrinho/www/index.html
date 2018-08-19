@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>title</title>
+  <title>Caixa Mercado</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
-  <meta name="author" content="">
+  <meta name="author" content="Luana e Isadora">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
@@ -69,10 +69,9 @@
 
 		</ul>
 		
-		<ul class="botoes">
-		<li><img src="img/unchecked.png" class="nao"></li>
-		<li><img src="img/checked.png" class="sim"></li>
-		</ul>
+
+<img src="img/checked.png" class="sim">
+
 	</section> 
 	<section class="compra">
 		<h1>ADICIONE PRODUTOS AO SEU ESTOQUE </h1>
@@ -114,10 +113,8 @@
 			</li>
 
 		</ul>
-		<ul class="botoes">
-		<li><img src="img/unchecked.png" class="naocompra"></li>
-		<li><img src="img/checked.png" class="simcompra"></li>
-		</ul>
+<img src="img/checked.png" class="simcompra">
+
 	</section>
 	<section class="vendafinal">
 		<h2>TOTAL A PAGAR EM REAIS</h2>
@@ -153,26 +150,13 @@
 		totaldodia += precototal;
 		$(".totaldia").text(totaldodia);
 	})
-	$(".nao").on("click", function(){
-		precototal = 0;
-		despesa = 0;
-		venda.fadeOut();
-		compra.fadeOut();
-		inicio.fadeIn();
-	})
 	$(".simcompra").on("click", function(){
 		compra.fadeOut();
 		$(".vendafinal").fadeIn();
 		totaldodia = totaldodia - despesa;
 		$(".totaldia").text(totaldodia);
 	})
-	$(".naocompra").on("click", function(){
-		precototal = 0;
-		despesa = 0;
-		venda.fadeOut();
-		compra.fadeOut();
-		inicio.fadeIn();
-	})
+
 	botaocompra.on("click", function(){
 		inicio.fadeOut();
 		compra.fadeIn();
