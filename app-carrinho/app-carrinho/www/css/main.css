@@ -128,3 +128,67 @@ margin-top: 25vh;
 .venda ul.botoes li img{
 	width: 10vw;
 }
+/*////////////////COMPRA/////////////*/
+.compra{
+	height: 100vh;
+	width: 100vw;
+	display: none;
+}
+.compra ul.produtos{
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+}
+.compra ul.produtos li{
+	width: 40vw;
+	padding: 3vh 0 0vh 5vw;
+}
+.compra li img{
+	width: 20vw;
+}
+
+.compra h1{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 1.3em;
+	text-shadow: 2px 2px #487eb0;
+	color: #ED4C67;
+	padding: 2vh 0 0.5vh 0;
+	letter-spacing: 2vw;
+}
+.compra h2{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 1.7em;
+	text-shadow: 1px 1px #ED4C67;
+	color: #487eb0;
+	padding: 1vh 0 0 0;
+	letter-spacing: 2vw;
+}
+.compra p{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 0.9em;
+	text-shadow: 1px 1px #487eb0;
+	color: #000000;
+	padding: 1vh 0 0 0;
+}
+.compra h3{
+	text-align: center;
+	font-family: "Baloo";
+	font-size: 1.5em;
+	text-shadow: 1px 1px #487eb0;
+	color: #ED4C67;
+	letter-spacing: 2vw;
+}
+.compra ul.botoes{
+	display: flex;
+	text-align: center;
+}
+.compra ul.botoes li{
+	width: 40vw;
+	padding: 3vh 0 0vh 5vw;
+}
+.compra ul.botoes li img{
+	width: 10vw;
+}

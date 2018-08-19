@@ -24,36 +24,42 @@
 	<section class="venda">
 		<h1>SELECIONE OS PRODUTOS À SUA COMPRA</h1>
 		<ul class="produtos">
-			<li class="leite"><img src="img/milk.png">
+			<li class="leitecompra"><img src="img/milk.png">
 			<h2 class="preco">$3</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantleite">3</h3>
 			</li>
-			<li class="maca"><img src="img/apple.png">
+
+			<li class="macacompra"><img src="img/apple.png">
 			<h2 class="preco">$2</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantmaca">3</h3>
 			</li>
-			<li class="pon"><img src="img/bread.png">
+
+			<li class="paocompra"><img src="img/bread.png">
 			<h2 class="preco">$3</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantpao">3</h3>
 			</li>
-			<li class="bolacha"><img src="img/cookies.png">
+
+			<li class="bolachacompra"><img src="img/cookies.png">
 			<h2 class="preco">$3</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantbolacha">3</h3>
 			</li>
-			<li class="peixe"><img src="img/fish.png">
+
+			<li class="peixecompra"><img src="img/fish.png">
 			<h2 class="preco">$6</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantpeixe">3</h3>
 			</li>
-			<li class="macaron"><img src="img/pasta.png">
+
+			<li class="macarraocompra"><img src="img/pasta.png">
 			<h2 class="preco">$5</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantmacarrao">3</h3>
 			</li>
+
 		</ul>
 		<ul class="botoes">
 		<li><img src="img/unchecked.png" class="nao"></li>
@@ -66,37 +72,43 @@
 			<li class="leite"><img src="img/milk.png">
 			<h2 class="preco">$3</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantleiteest">3</h3>
 			</li>
+
 			<li class="maca"><img src="img/apple.png">
 			<h2 class="preco">$2</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantmacaest">3</h3>
 			</li>
-			<li class="pon"><img src="img/bread.png">
+
+			<li class="pao"><img src="img/bread.png">
 			<h2 class="preco">$3</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantpaoest">3</h3>
 			</li>
+
 			<li class="bolacha"><img src="img/cookies.png">
 			<h2 class="preco">$3</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantbolachaest">3</h3>
 			</li>
+
 			<li class="peixe"><img src="img/fish.png">
 			<h2 class="preco">$6</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantpeixeest">3</h3>
 			</li>
-			<li class="macaron"><img src="img/pasta.png">
+
+			<li class="macarrao"><img src="img/pasta.png">
 			<h2 class="preco">$5</h2>
 			<p>QUANT. EM ESTOQUE</p>
-			<h3 class="quantleite">0</h3>
+			<h3 class="quantmacarraoest">3</h3>
 			</li>
+
 		</ul>
 		<ul class="botoes">
-		<li><img src="img/unchecked.png" class="nao"></li>
-		<li><img src="img/checked.png" class="sim"></li>
+		<li><img src="img/unchecked.png" class="naovenda"></li>
+		<li><img src="img/checked.png" class="simvenda"></li>
 		</ul>
 	</section>
 
@@ -107,16 +119,82 @@
 	botaocompra = $(".bcompra");
 	compra = $(".compra");
 	venda = $(".venda");
+	quantmaca = 3
+	quantleite = 3
+	quantpao = 3
+	quantbolacha = 3
+	quantpeixe = 3
+	quantmacarrao = 3
+	precototal = 0;
 
 
-	botaovenda.on("click", function(){
-		inicio.fadeOut();
-		venda.fadeIn();
+	$(".sim").on("click", function(){
+		compra.fadeOut();
+		venda.fadeOut();
+		inicio.fadeIn();
+	})
+	$(".nao").on("click", function(){
+		precototal = 0;
+		venda.fadeOut();
+		compra.fadeOut();
+		inicio.fadeIn();
 	})
 	botaocompra.on("click", function(){
 		inicio.fadeOut();
 		compra.fadeIn();
 	})
+
+	/////////////////////VENDA////////////////////
+
+	$(".leitecompra").on("click", function(){
+		if(quantleite == 0){
+			console.log("Sem leite no estoque")
+		} else {
+		$(".quantleite").text(quantleite -=1);
+		console.log(quantleite)
+		precototal += 3;
+		
+	}})
+	$(".macacompra").on("click", function(){
+		if(quantmaca == 0){
+			console.log("Sem maçã no estoque")
+		} else {
+		$(".quantmaca").text(quantmaca -= 1);
+		precototal += 2;
+		
+	}})
+	$(".paocompra").on("click", function(){
+		if(quantpao == 0){
+			console.log("Sem pao no estoque")
+		} else {
+		$(".quantpao").text(quantpao -= 1);
+		precototal += 3;
+		
+	}})
+	$(".bolachacompra").on("click", function(){
+		if(quantbolacha == 0){
+			console.log("Sem bolacha no estoque")
+		} else {
+		$(".quantbolacha").text(quantbolacha -= 1);
+		precototal += 3;
+		
+	}})
+	$(".peixecompra").on("click", function(){
+		if(quantpeixe == 0){
+			console.log("Sem peixe no estoque")
+		} else {
+		$(".quantpeixe").text(quantpeixe -= 1);
+		precototal += 6;
+		
+	}})
+	$(".macarraocompra").on("click", function(){
+		if(quantmacarrao == 0){
+			console.log("Sem macarrao no estoque")
+		} else {
+		$(".quantmacarrao").text(quantmacarrao -= 1);
+		precototal += 5;
+		
+	}})
 	
 </script>
 </body>
