@@ -111,6 +111,11 @@
 		<li><img src="img/checked.png" class="simvenda"></li>
 		</ul>
 	</section>
+	<section class="vendafinal">
+		<h2>TOTAL A PAGAR EM REAIS</h2>
+		<h1 class="precofinal">0</h1>
+		<h3 class="menu">MENU PRINCIPAL</h3>
+	</section>
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script>
@@ -131,7 +136,7 @@
 	$(".sim").on("click", function(){
 		compra.fadeOut();
 		venda.fadeOut();
-		inicio.fadeIn();
+		$(".vendafinal").fadeIn();
 	})
 	$(".nao").on("click", function(){
 		precototal = 0;
@@ -143,7 +148,11 @@
 		inicio.fadeOut();
 		compra.fadeIn();
 	})
-
+	$(".menu").on("click", function(){
+		precototal = 0;
+		$("vendafinal").fadeOut();
+		inicio.fadeIn();
+	})
 	/////////////////////VENDA////////////////////
 
 	$(".leitecompra").on("click", function(){
